@@ -1,0 +1,19 @@
+Bisektionalgorithmus:
+Es werden zwei Werte a und b gewählt, für die f(a) > 0 und f(b) < 0 (oder umgekehrt)
+Intervallhalbierung: ein Mittelpunkt c wird als arithmetisches Mittel zwischen a und b berechnet, c = (a + b) / 2
+die Funktion f wird für den Wert von c . ausgewertet
+wenn f(c) = 0 bedeutet, dass wir die Nullstelle der Funktion gefunden haben,die c ist
+falls f(c) ≠ 0 ist, prüfen wir das Vorzeichen von f(c):
+wenn f(c) das gleiche Vorzeichen wie f(a) hat, ersetzen wir a durch c und behalten den gleichen Wert für b
+wenn f(c) das gleiche Vorzeichen wie f(b) hat, ersetzen wir b durch c und behalten den gleichen Wert für a
+wir gehen jetzt und machen die Intervallhalbierung nochmals . und berechnen c mit dem neuen Wert von a oder b neu.
+Der Algorithmus endet, wenn die Werte von f(c) kleiner als eine definierte Toleranz (z. B. 0,001) sind. In diesem Fall sagen wir, dass c nahe genug ist, um die Nullstelle der Funktion zu sein, für die f(c) ~= 0 ist. 
+
+Newton-Algorithmus: 
+Es beginnt mit einer Funktion f, die für eine reelle Variable x definiert ist, deren Ableitung f′ und einer anfänglichen Schätzung x0 für eine nulstelle von f. Wenn die Funktion hinreichende Annahmen erfüllt und die anfängliche Schätzung nahe liegt, dann x1 = x0-f(x)/f'(x) ist eine bessere Näherung der Nulstelle als x0. Geometrisch ist (x1, 0) der Schnittpunkt der x-Achse und der Tangente des Graphen von f bei (x0, f(x0)): das heißt, die verbesserte Schätzung ist die eindeutige Nullstelle der linearen Näherung am Anfangs Punkt. Der Vorgang wird wiederholt wie xn+1=xn-f(xn)/f'(xn) bis ein ausreichend genauer Wert erreicht ist.
+
+1.Polynomdivision durchführen (nur erforderlich, falls die Funktion f(x) unecht gebrochen ist)
+2.Nullstellen des Nenners bestimmen
+3.Zu jeder Nullstelle die Partialbrüche berechnen
+4.Ansatz für die Partialbruchzerlegung aufstellen
+5.Koeffizientenvergleich durchführen
